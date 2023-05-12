@@ -1,5 +1,9 @@
+import Banner from '@/components/Banner'
+import Feature from '@/components/Feature'
 import Header from '@/components/Header'
 import Navbar from '@/components/Navbar'
+import Popular from '@/components/Popular'
+import SliderCenter from '@/components/SliderCenter'
 import Textnav from '@/components/Textnav'
 import Image from 'next/image'
 // import { Inter } from 'next/font/google'
@@ -18,6 +22,10 @@ export default function Home() {
       <div className='border-b border-[#ececec]'>
       <Navbar />
       </div>
+      <SliderCenter />
+      <Feature />
+      <Banner />
+      <Popular />
     </main>
   )
 }

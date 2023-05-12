@@ -17,7 +17,8 @@ const Textnav = () => {
         <div className='flex border-r border-[#ececec] pr-2 font-bold w-[19%]'>All Categories <IoIosArrowDown className='ml-2 m-1'/></div>
         <input className='w-[76%] focus:outline-none'placeholder='Search for items...'/><HiOutlineSearch className=' text-lg'/>
       </div>
-      <div className='flex bg-white border-1 boder-[#ececec] py-2 h-9 px-4 rounded-md mt-2 ml-4 drop-shadow-lg opacity-70'><CiLocationOn className='text-base mr-2'/>Your Loction<IoIosArrowDown className='m-1 ml-2 '/></div>
+      <div className='flex bg-white border-1 boder-[#ececec] py-2 h-9 px-4 rounded-md mt-2 ml-4 drop-shadow-lg opacity-70'><CiLocationOn className='text-base mr-2'/>Your Loction<IoIosArrowDown className='m-1 ml-2 '/>
+      </div>
       <div className='flex py-3 text-base mt-1'><GiRecycle className='text-2xl mr-1 -mt-1 ml-2'/>Compare</div>
       <div className='flex py-3 text-base mt-1'><BsHeart className='text-2xl mr-1 -mt-1'/>Wishlist</div>
       <div className='flex py-3 text-base mt-1'><RiShoppingCart2Line className='text-2xl mr-1 -mt-1'/>Cart</div>
