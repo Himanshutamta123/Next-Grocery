@@ -36,28 +36,28 @@ const Navbar = () => {
             {showList1 ? <IoIosArrowUp className='mt-1'/> : <IoIosArrowDown className='mt-1'/> }
         </div>
         <div className={`absolute z-10 bg-white grid grid-cols-2 p-6 border-[1px] border-[#3BB77E] rounded-lg top-[110%] gap-4 ${!showList1 && "hidden"}`}>
-          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg'>
+          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg cursor-pointer'>
             Milks and Dairies
           </div>
-          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg'>
+          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg cursor-pointer'>
             Milks and Dairies
           </div>
-          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg'>
+          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg cursor-pointer'>
             Milks and Dairies
           </div>
-          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg'>
+          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg cursor-pointer'>
             Milks and Dairies
           </div>
-          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg'>
+          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg cursor-pointer'>
             Milks and Dairies
           </div>
-          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg'>
+          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg cursor-pointer'>
             Milks and Dairies
           </div>
-          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg'>
+          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg cursor-pointer'>
             Milks and Dairies
           </div>
-          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg'>
+          <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg cursor-pointer'>
             Milks and Dairies
           </div>
         </div>

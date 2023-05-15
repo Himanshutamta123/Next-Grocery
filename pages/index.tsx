@@ -1,9 +1,14 @@
+import Allproducts from '@/components/Allproducts'
 import Banner from '@/components/Banner'
+import Bestseller from '@/components/Bestseller'
+import Deals from '@/components/Deals'
+import Facility from '@/components/Facility'
 import Feature from '@/components/Feature'
 import Header from '@/components/Header'
 import Navbar from '@/components/Navbar'
 import Popular from '@/components/Popular'
 import SliderCenter from '@/components/SliderCenter'
+import Subscribe from '@/components/Subscribe'
 import Textnav from '@/components/Textnav'
 import Image from 'next/image'
 // import { Inter } from 'next/font/google'
@@ -26,6 +31,11 @@ export default function Home() {
       <Feature />
       <Banner />
       <Popular />
+      <Bestseller />
+      <Deals />
+      <Allproducts />
+      <Subscribe />
+      <Facility />
     </main>
   )
 }
