@@ -28,7 +28,7 @@ const Banner = () => {
             <div className='relative ' >
                 <Image src={items.img} alt="fshdjf" className='rounded-xl'/>
                 <div className='absolute top-[25%] left-[10%] leading-8 w-[50%] space-y-6'>
-                <h1 className='text-[27px] font-bold opacity-80 cursor-pointer hover:-translate-y-2 duration-150'>{items.title}</h1>
+                <h1 className='text-[27px] font-bold opacity-80 cursor-pointer hover:-translate-y-2 duration-150 '>{items.title}</h1>
                 <button className='flex bg-[#3BB77E] rounded-md text-sm py-1 px-2 text-white font-semibold hover:bg-[#ffc107]'>Shop Now<BiRightArrowAlt className='m-1'/></button>
                 </div>
             </div>
