@@ -1,4 +1,5 @@
 import React from "react";
+
 const facliltyData = [
   {
     head: "Best prices & offers",
@@ -22,12 +23,14 @@ const facliltyData = [
   },
 ];
 
+
 const Facility = () => {
+
   return (
-    <div className="w-[94%] max-w-[100rem] m-auto grid grid-cols-5 gap-6 my-10">
+    <div className="w-[94%] max-w-[100rem] m-auto flex flex-wrap gap-6 my-10 justify-center">
         {facliltyData.map((items) => {
             return(
-                <div className="bg-[#F4F6FA] rounded-lg p-4 text-center">
+                <div className="dives bg-[#F4F6FA] rounded-lg p-4 text-center w-[300px]">
                     <h3 className="font-semibold text-lg">{items.head}</h3>
                     <p className="text-[#7E7E7E]">{items.para}</p>
                 </div>

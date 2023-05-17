@@ -4,19 +4,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { BsHeadset } from 'react-icons/bs';
 import { BsFire } from 'react-icons/bs';
 import { IoIosArrowUp } from 'react-icons/io';
-
 import styled from 'styled-components';
-
-
-const HoverDiv = styled.div`
-  ul {
-    display: none;
-  }
-
-  &:hover ul{
-    display: block;
-  }
-`;
 
 
 
@@ -28,14 +16,14 @@ const Navbar = () => {
     console.log("hsdfsh")
   } 
   return (
-    <div className='m-auto w-[94%] max-w-[100rem] py-3 flex justify-between align-middle relative'>
+    <div className='m-auto w-[94%] max-w-[100rem] py-3 flex justify-between align-middle relative flex-wrap max-md:hidden'>
       <div className=''>
-        <div className='flex bg-[#3BB77E] py-3 px-3 gap-2 text-white rounded-lg cursor-pointer' onClick={handleList}>
+        <div className='flex bg-[#3BB77E] py-3 px-3 gap-2 text-white rounded-lg cursor-pointer max-lg:hidden' onClick={handleList}>
             <AiOutlineAppstore className='text-2xl'/>
             <p className='font-bold'>Browse All Categories</p>
             {showList1 ? <IoIosArrowUp className='mt-1'/> : <IoIosArrowDown className='mt-1'/> }
         </div>
-        <div className={`absolute z-10 bg-white grid grid-cols-2 p-6 border-[1px] border-[#3BB77E] rounded-lg top-[110%] gap-4 ${!showList1 && "hidden"}`}>
+        <div className={`absolute z-10 bg-white grid grid-cols-2 p-6 border-[1px] border-[#3BB77E] rounded-lg top-[110%]  ${!showList1 && "hidden"}`}>
           <div className='px-3 py-2 border-[1px] rounded-lg font-bold opacity-90 text-sm hover:text-[#3BB77E] hover:border-[#3BB77E]    hover:drop-shadow-lg cursor-pointer'>
             Milks and Dairies
           </div>
@@ -62,7 +50,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-        <div className='flex gap-9 justify-startw-[60%] -ml-[10%] pt-3 font-bold'>
+        <div className='flex gap-9 justify-startw-[60%]  pt-3 font-bold  max-lg:gap-3 '>
             <h2 className='flex gap-2 hover:text-[#3BB77E] cursor-pointer'><BsFire className='text-xl text-[#3BB77E]'/>Deals</h2>
             <HoverDiv className='flex gap-2 cursor-pointer'><h4 className='hover:text-[#3BB77E]'>Home</h4><IoIosArrowDown className='mt-1.5 p-0.5'/>
             <ul className='absolute w-40 top-[90%] py-4 z-10 rounded-2xl border-[1px] bg-white border-[#3BB77E]'>
@@ -120,7 +108,7 @@ const Navbar = () => {
             </ul></HoverDiv>
             <div className='hover:text-[#3BB77E] cursor-pointer'>Contact</div>
         </div>
-        <div className='flex gap-2'>
+        <div className='flex gap-2 max-xl:hidden  '>
             <BsHeadset className='text-4xl opacity-80 mt-3'/>
             <div>
                 <h1 className='text-[26px] m-0 font-extrabold text-[#3BB77E]'>1900 - 888</h1>
@@ -132,3 +120,14 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
+const HoverDiv = styled.div`
+  ul {
+    display: none;
+  }
+
+  &:hover ul{
+    display: block;
+  }
+`;

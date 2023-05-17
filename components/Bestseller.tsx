@@ -10,13 +10,15 @@ import product31 from ".././images/product-3-1.jpg";
 import product32 from ".././images/product-3-2.jpg";
 import product41 from ".././images/product-4-1.jpg";
 import product42 from ".././images/product-4-2.jpg";
-import {useState} from 'react'
 import { RiShoppingCart2Line } from "react-icons/ri";
 import ratingstar from '../images/stars.webp'
 import styled from 'styled-components';
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
 import { BsShuffle } from "react-icons/bs";
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 const bestproduct = [
@@ -59,21 +61,41 @@ const bestproduct = [
         discount: "$238.35",
         mrp: "$245.8",
         color: "#ffc107"
+      },
+      {
+        lf: "New",
+        product1: product31,
+        product11: product32,
+        name: "snack",
+        about: "Angie’s Boomchickapop Sweet & Salty Kettle Corn",
+        discount: "$238.35 ",
+        mrp: "$245.8",
+        color: "#3BB77E",
+      },
+      {
+        lf: "Save 15%",
+        product1: product41,
+        product11: product42,
+        name: "Vegetables",
+        about: "Foster Farms Takeout Crispy Classic Buffalo Wings",
+        discount: "$238.35",
+        mrp: "$245.8",
+        color: "#ffc107"
       }
 ]
 
+
+
 const Bestseller = () => {
-    const [hovered, setHovered] = useState(false);
 
-    const HoverDiv = styled.div`
-    ul {
-      display: none;
-    }
-
-    &:hover ul {
-      display: flex;
-    }
-  `;
+  const settings = {
+    dots: false,
+   infinite: true,
+   speed: 500,
+   slidesToShow: 4,
+   slidesToScroll: 1,
+   autoplay: true,
+   };
 
   return (
     <div className='w-[96%] max-w-[100rem] m-auto my-6'>
@@ -85,20 +107,19 @@ const Bestseller = () => {
             <li className='hover:text-[#3BB77E] cursor-pointer hover:-translate-y-1 duration-150'>New added</li>
         </ul>
       </div>
-      <div className='flex py-4 gap-6' >
-        <div className='relative w-[32%]'>
+      <div className='flex py-4 gap-6 flex-wrap' >
+        <div className='relative w-[380px]'>
         <Image src={banner4} alt='banner4' width={390} className='rounded-2xl'/>
         <div className='absolute top-[10%] w-[80%] left-[15%] space-y-24'>
         <h1 className='text-[43px] font-extrabold tracking-wide opacity-90 leading-[50px] '>Bring nature into your home</h1>
         <button className='flex bg-[#3BB77E] text-white font-semibold text-sm px-3 py-1.5 rounded-lg hover:bg-[#ffc107]'>Shop now<BiRightArrowAlt className='m-1'/></button>
         </div>
         </div>
-        <div className='grid grid-cols-4 gap-6 w-[100%]' onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}> 
+        <Slider {...settings} className='w-[1170px] '> 
             {bestproduct.map((items) => {
                 return(
-                    <HoverDiv className='border-[1px] rounded-2xl relative p-5 cursor-pointer hover:shadow-lg'>
-                        <ul className="absolute border-[1px] border-[#3BB77E] top-[25%] bg-white rounded-lg left-[26%]">
+                    <HoverDiv className='border-[1px] rounded-2xl relative p-5 cursor-pointer hover:shadow-lg ml ' >
+                        <ul className="absolute border-[1px] border-[#3BB77E] top-[25%] bg-white rounded-lg left-[26%] z-50">
                 <li className=" px-3 py-2.5 text-lg text-[#3BB77E] cursor-pointer hover:text-[#ffc107] font-semibold border-r-[1px] border-[#3BB77E]">
                   <AiOutlineHeart />
                 </li>
@@ -115,12 +136,21 @@ const Bestseller = () => {
               >
                 {items.lf}
               </p>
+              <div className='imageDiv'>
               <Image
-                src={hovered ? items.product11 : items.product1}
+                src={ items.product1}
                 width={270}
                 alt="product1"
-                className=""
+                className="frontimage"
               />
+              <Image
+                src={ items.product11}
+                width={270}
+                alt="product1"
+                className="backimage"
+              />
+
+              </div>
               <p className="text-sm font-bold text-[#adadad] py-2 hover:text-[#3BB77E] cursor-pointer">
                 {items.name}
               </p>
@@ -146,10 +176,47 @@ const Bestseller = () => {
               </HoverDiv>
                 )
             })}
-        </div>
+        </Slider>
       </div>
     </div>
   )
 }
 
 export default Bestseller
+
+
+const HoverDiv = styled.div`
+width: 10%;
+    
+ul {
+  display: none;
+}
+
+&:hover ul {
+  display: flex;
+}
+&:hover .imageDiv {
+  transform: rotateY(180deg);
+}
+
+.imageDiv{
+  position: relative;
+height: 250px;
+transform-style: preserve-3d;
+transition: all 0.1s ease;
+margin-top: 8px;
+
+.frontimage{
+  position: absolute;
+  top: 0;
+  backface-visibility: hidden;
+}
+
+.backimage{
+  position: absolute;
+  top: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+}
+`;
