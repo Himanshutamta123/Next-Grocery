@@ -26,7 +26,7 @@ const dealsData = [
   },
   {
     image: banner7,
-    para:"Signature Wood-Fired Mushroom and Caramelized",
+    para:"Signature Wood-Fired Mushroom Fired",
     company:"Progresso",
     mrp: "$12.85 ",
     discount: "$13.8"
@@ -42,20 +42,20 @@ const dealsData = [
 const Deals = () => {
   return (
     <div className="w-[94%] m-auto max-w-[100rem]">
-      <div className="flex justify-between my-5">
+      <div className="flex justify-between my-5 flex-wrap mt-7">
         <h1 className="text-3xl font-semibold opacity-90 ">Deals of the day</h1>
-        <p className="flex text-[#7E7E7E] hover:text-[#3BB77E] font-semibold">
+        <p className="flex text-[#7E7E7E] hover:text-[#3BB77E] font-semibold cursor-pointer max-sm:hidden">
           All Deals
           <GrFormNext className="m-1 text-[#7E7E7E] hover:text-[#3BB77E] text-lg" />
         </p>
       </div>
-      <div className="my-4 grid grid-cols-4 gap-6 ">
+      <div className="my-4 flex gap-x-6 flex-wrap gap-y-36 justify-center">
         {dealsData.map((items) => {
           return (
-            <div className="relative">
+            <div className="relative w-[382px]">
               <Image src={items.image} alt="banner" className="rounded-2xl" />
               <div className="absolute top-[42%] w-[86%] left-[7%]">
-                <div className="flex m-[7%] gap-5 text-center">
+                <div className="flex m-[7%] gap-5 text-center max-sm:gap-1">
                     <div className="bg-white w-[25%] py-2 px-2 rounded-lg leading-4">
                   <p className="text-[#3BB77E] font-semibold text-xl hover:-translate-y-1 duration-150">679</p>
                   <h4 className="text-[#7E7E7E]">Days</h4>
@@ -96,7 +96,6 @@ const Deals = () => {
             </div>
           );
         })}
-        <div></div>
       </div>
     </div>
   );

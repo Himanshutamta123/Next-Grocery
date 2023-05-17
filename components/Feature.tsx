@@ -75,18 +75,18 @@ const categoryData = [
 const Feature = () => {
   return (
     <div className='m-auto w-[94%] max-w-[100rem] mt-12'>
-      <div className='flex gap-9 mb-10'>
+      <div className='flex gap-9 mb-10 flex-wrap max-sm:gap-4'>
         <h1 className='text-3xl font-bold opacity-80'>
             Featured Categories
         </h1>
-        <ul className='flex font-semibold gap-7 items-end '>
+        <ul className='flex font-semibold gap-7 items-end flex-wrap max-sm:gap-4'>
             <li className='hover:text-[#3BB77E] cursor-pointer hover:-translate-y-1 duration-75'>Cake & Milk</li>
             <li className='hover:text-[#3BB77E] cursor-pointer hover:-translate-y-1 duration-75'>Coffes & Teas</li>
             <li className='hover:text-[#3BB77E] cursor-pointer hover:-translate-y-1 duration-75'>Pet Foods</li>
             <li className='hover:text-[#3BB77E] cursor-pointer hover:-translate-y-1 duration-75'>Vegetables</li>
         </ul>
       </div>
-      <div className='grid grid-cols-10 gap-6 text-center'>
+      <div className='flex flex-wrap gap-6 text-center justify-center '>
         {categoryData.map((items) : any => {
           return(
             <div className='rounded-xl items-center place-self-center p-5 border-[1px] hover:border-[#3BB77E] hover:shadow-lg ' style={{background: items.color}}>

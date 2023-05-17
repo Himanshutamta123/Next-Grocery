@@ -4,7 +4,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 
 const Header = () => {
   return (
-    <div className='m-auto w-[94%] max-w-[100rem]  grid grid-cols-3 p-2 text-sm'>
+    <div className='m-auto w-[94%] max-w-[100rem] flex flex-wrap justify-between p-2 text-sm max-md:hidden'>
       <div className=''>
         <ul className='flex gap-2'>
             <li className='border-r border-[#ececec] pr-2'>
@@ -21,7 +21,7 @@ const Header = () => {
             </li>
         </ul>
       </div>
-      <div className='justify-self-center font-black text-sm opacity-70'>
+      <div className='justify-self-center font-black text-sm opacity-70 min-w-hidden'>
       <h3>Supper Value Deals - Save more with coupons</h3>
       </div>
       <div className='justify-self-end'>

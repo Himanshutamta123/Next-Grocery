@@ -22,13 +22,13 @@ const bannerData = [
 
 const Banner = () => {
   return (
-    <div className='w-[96%] m-auto max-w-[100rem] my-9 grid grid-cols-3 gap-7'>
+    <div className='w-[96%] m-auto max-w-[100rem] my-9 flex gap-7 flex-wrap justify-center'>
       {bannerData.map((items) : any => {
         return(
-            <div className='relative ' >
+            <div className='relative w-[510px]' >
                 <Image src={items.img} alt="fshdjf" className='rounded-xl'/>
-                <div className='absolute top-[25%] left-[10%] leading-8 w-[50%] space-y-6'>
-                <h1 className='text-[27px] font-bold opacity-80 cursor-pointer hover:-translate-y-2 duration-150 '>{items.title}</h1>
+                <div className='absolute top-[25%] left-[10%] leading-8 w-[50%] space-y-6 max-sm:w-[70%] max-sm:leading-6'>
+                <h1 className='text-[27px] font-bold opacity-80 cursor-pointer hover:-translate-y-2 duration-150 max-sm:text-[18px] '>{items.title}</h1>
                 <button className='flex bg-[#3BB77E] rounded-md text-sm py-1 px-2 text-white font-semibold hover:bg-[#ffc107]'>Shop Now<BiRightArrowAlt className='m-1'/></button>
                 </div>
             </div>

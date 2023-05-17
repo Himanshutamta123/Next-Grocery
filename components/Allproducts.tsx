@@ -76,14 +76,14 @@ const trendingData = [
     ];
 const Allproducts = () => {
   return (
-    <div className="w-[96%] m-auto max-w-[100rem] mt-36 grid grid-cols-4 gap-6 mb-16">
+    <div className="w-[96%] m-auto max-w-[100rem] mt-36 flex flex-wrap gap-6 mb-16 justify-center">
       <div>
         <h1 className="text-2xl font-extrabold pb-5 border-b-[2px] ">
           Top Selling
         </h1>
         {topSellingData.map((items) => {
           return (
-            <div className="flex gap-6 pt-7 hover:-translate-y-1 duration-200 cursor-pointer    ">
+            <div className="flex gap-6 pt-7 hover:-translate-y-1 duration-200 cursor-pointer w-[380px] max-sm:w-[300px]">
               <Image
                 src={items.img}
                 alt="fkd"
@@ -115,7 +115,7 @@ const Allproducts = () => {
         </h1>
         {trendingData.map((items) => {
           return (
-            <div className="flex gap-6 pt-7 hover:-translate-y-1 duration-200 cursor-pointer    ">
+            <div className="flex gap-6 pt-7 hover:-translate-y-1 duration-200 cursor-pointer w-[380px]  max-sm:w-[300px] ">
               <Image
                 src={items.img}
                 alt="fkd"
@@ -147,7 +147,7 @@ const Allproducts = () => {
         </h1>
         {recentlyData.map((items) => {
           return (
-            <div className="flex gap-6 pt-7 hover:-translate-y-1 duration-200 cursor-pointer    ">
+            <div className="flex gap-6 pt-7 hover:-translate-y-1 duration-200 cursor-pointer w-[380px] max-sm:w-[300px]  ">
               <Image
                 src={items.img}
                 alt="fkd"
@@ -179,7 +179,7 @@ const Allproducts = () => {
         </h1>
         {topData.map((items) => {
           return (
-            <div className="flex gap-6 pt-7 hover:-translate-y-1 duration-200 cursor-pointer    ">
+            <div className="flex gap-6 pt-7 hover:-translate-y-1 duration-200 cursor-pointer w-[380px] max-sm:w-[300px]  ">
               <Image
                 src={items.img}
                 alt="fkd"
